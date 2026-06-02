@@ -1,16 +1,16 @@
 """
-HDD/CDD Calculator
+EDDC — Energy Degree Day Calculator
 
 A Python library for calculating Heating Degree Days (HDD) and Cooling Degree Days (CDD)
-using multiple weather data sources such as:
+using multiple weather data sources:
 
     - U.S. National Weather Service (NWS) API
-    - Meteostat historical data API
+    - Open-Meteo historical weather API (no API key required)
 
-The package also includes:
-    * Utilities for coordinate validation, temperature conversions, and HDD/CDD calculations
+Also includes:
+    * Coordinate validation and temperature conversion utilities
     * CSV utilities for reading and aligning energy consumption data
-    * Unified API for selecting a data source
+    * Unified multi-source API
     * Linear regression analysis between degree days and energy consumption
     * Visualization support for regression results
 """
@@ -22,7 +22,7 @@ from .calculator import (
     DegreeDaysResult,
 )
 
-# Meteostat data source
+# Open-Meteo data source
 from .meteostat_api import fetch_meteostat_data
 
 # Unified multi-source access
@@ -59,38 +59,21 @@ from .exceptions import (
 __version__ = "0.1.5"
 
 __all__ = [
-    # Core NWS API
     "get_degree_days_for_location",
     "get_degree_days_for_period",
-
-    # Meteostat API
     "fetch_meteostat_data",
-
-    # Unified multi-source API
     "get_degree_days",
-
-    # Regression analysis
     "perform_regression",
-
-    # Visualization
     "plot_regression",
-
-    # CSV utilities
     "read_energy_data_from_csv",
     "read_energy_data_with_dates",
     "align_energy_with_degree_days",
-
-    # Data structures
     "DegreeDaysResult",
-
-    # Utilities
     "validate_coordinates",
     "calculate_degree_days",
     "fahrenheit_to_celsius",
     "celsius_to_fahrenheit",
     "mean_temperature",
-
-    # Exceptions
     "NWSAPIError",
     "InvalidCoordinatesError",
 ]

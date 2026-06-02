@@ -13,16 +13,8 @@ authors = [
     { name = "Ryan Kmetz", email = "consultrmk@gmail.com" }
 ]
 keywords = [
-    "HDD",
-    "CDD",
-    "degree-days",
-    "weather",
-    "climate",
-    "energy",
-    "NWS",
-    "Open-Meteo",
-    "regression",
-    "visualization"
+    "HDD", "CDD", "degree-days", "weather", "climate",
+    "energy", "NWS", "Open-Meteo", "regression", "visualization"
 ]
 classifiers = [
     "Development Status :: 4 - Beta",
@@ -61,8 +53,11 @@ tests = [
 ]
 
 [project.urls]
-"Documentation" = "https://github.com/rmkenv/eddc"
-
+"Source" = "https://github.com/rmkenv/eddc"
+"Tracker" = "https://github.com/rmkenv/eddc/issues"
 
 [tool.setuptools]
-packages = ["eddc"]
+packages = ["hdd_cdd_calculator"]
+
+[tool.pytest.ini_options]
+testpaths = ["hdd_cdd/tests"]
