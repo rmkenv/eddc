@@ -61,9 +61,8 @@ tests = [
 ]
 
 [project.urls]
-"Documentation" = "https://github.com/rmkenv/hdd_cdd_calculator/tree/main/docs"
-"Source" = "https://github.com/rmkenv/hdd_cdd_calculator"
-"Tracker" = "https://github.com/rmkenv/hdd_cdd_calculator/issues"
+"Documentation" = "https://github.com/rmkenv/eddc"
+
 
 [tool.setuptools]
-packages = ["hdd_cdd_calculator"]
+packages = ["eddc"]
